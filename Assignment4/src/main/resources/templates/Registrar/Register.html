@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeLeaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+body
+{
+margin-top:5%;
+ text-align:center;
+ background-color:grey;
+	color:white;
+}    
+a
+{
+color: white;
+}
+</style>
+</head>
+<body>
+<hr>
+<h1>Register Patient</h1>
+<hr>
+<form method="get" action="RAddPage">
+Health Card No.<input type="text" name="pId"/><br><br>
+First Name: <input type="text" name="firstName"/>
+<br><br>
+Last Name: <input type="text" name="lastName">
+<br><br>
+E-Mail: <input type="email" name="email">
+<br><br>
+Phone:<input type="text" name="phone">
+<br><br>
+Doctor Name: <select name="doctor">
+  <option value="Harleen">Harleen</option>
+  <option value="Divjot">Divjot</option>
+  <option value="Saman">Saman</option>
+  <option value="Kamal">Kamal</option>
+</select>
+<br><br>
+<input type="submit" name="Submit" value="Add">
+<br><br>
+</form>
+<form action="/view" method="get">
+<input type="submit" name="Submit" value="View">
+</form>
+<a href="Home.html">Home</a><br>
+<a href="" th:href="@{/logout}">LogOut</a>
+<hr>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+body
+{
+margin-top:10%;
+ text-align:center;
+ background-color:grey;
+	color:white;
+}    
+a
+{
+color: white;
+}
+</style>
+</head>
+<body>
+<hr>
+<h1>Patient Information</h1>
+<hr>
+<div class=edit>
+<form method="Get" action="/modify">
+<input type="hidden" name="pId" th:value="${doctor.pId}">
+First Name : <input type="text" name="firstName" th:value="${doctor.firstName}"><br><br>
+Last Name :<input type="text" name="lastName" th:value="${doctor.lastName}"><br><br>
+E-Mail :<input type="text" name="email" th:value="${doctor.email}"><br><br>
+Phone :<input type="text" name="phone" th:value="${doctor.phone}"><br><br>
+Doctor : <input type="text" name="doctor" th:value="${doctor.doctor}"><br><br>
+<input type="submit" value="Update"/>
+</form>
+</div>
+<a href="Home.html">Home</a><br>
+<a href="" th:href="@{/logout}">LogOut</a>
+<hr>.
+</body>
+</html>

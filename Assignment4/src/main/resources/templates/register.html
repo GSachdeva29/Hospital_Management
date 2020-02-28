@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" 
+xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<style>
+body
+{
+margin-top:10%;
+ text-align:center;
+ background-color:grey;
+	color:white;
+}    
+a
+{
+color: white;
+}
+</style>
+<head>
+</head>
+<body>
+<hr>
+	<h1>Register User</h1>
+	<form action="#" th:action="@{/register}" method="post">
+		Name:<input type="text" name="username"><br><br>
+		Password:<input type="password" name="password"><br>
+		<br>
+<input type="checkbox" name="user" value="management" checked> Management<br>
+<input type="checkbox" name="user" value="doctor">Doctor<br> 
+<br>
+<input type="submit" value="Add User">
+	</form>
+	<hr>
+</body>
+</html>

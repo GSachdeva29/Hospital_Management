@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html http://www.thymeleaf.org>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+body
+{
+margin-top:5%;
+ text-align:center;
+ background-color:grey;
+	color:white;
+}    
+a
+{
+color: white;
+}
+</style>
+</head>
+<body>
+<hr>
+<h1>Your Search results Matches</h1>
+<hr>
+<table >
+<tr>
+<th>Health Card No.</th>
+<th>First Name</th>
+<th>Last Name</th>
+<th>E-mail</th>
+<th>Phone</th>
+<th>Doctor</th>
+</tr>
+<tr>
+<td th:text="${doctor.pId}"></td>
+<td th:text="${doctor.firstName}"></td>
+<td th:text="${doctor.lastName}"></td>
+<td th:text="${doctor.email}"></td>
+<td th:text="${doctor.phone}"></td>
+<td th:text="${doctor.doctor}"></td>
+<td><a href="" th:href="@{/edit/{pId}(pId=${doctor.pId})}">EDIT</a></td>
+<td><a href="" th:href="@{/delete/{pId}(pId=${doctor.pId})}">DELETE</a></td>
+</tr>
+</table>
+<a href="Home.html">Home</a><br>
+<a href="" th:href="@{/logout}">LogOut</a>
+<hr>
+</body>
+</html>

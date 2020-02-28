@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+body
+{
+margin-top:10%;
+ text-align:center;
+ background-color:grey;
+	color:white;
+}    
+a
+{
+color: white;
+}
+</style>
+</head>
+<body>
+<hr>
+<H1>Patient Reports</H1>
+<hr>
+<form method="Get" action="/modifyDetails">
+<input type="hidden" name="pId" th:value="${doctorEdit.pId}">
+Visit Date : <input type="text" name="vDate" th:value="${doctorEdit.vDate}"><br><br>
+Reason of visit :<input type="text" name="vReason" th:value="${doctorEdit.vReason}"><br><br>
+FeedBack :<input type="text" name="vFeedback" th:value="${doctorEdit.vFeedback}"><br><br>
+Prescription :<input type="text" name="vPrescription" th:value="${doctorEdit.vPrescription}"><br><br>
+Next Visit: <select name="vNext">
+  <option value="Required">Required</option>
+  <option value="Not Required">Not Required</option>
+  </select><br><br>
+<input type="submit" value="Update"/>
+</form>
+</div>
+<a href="" th:href="@{/logout}">LogOut</a>
+<hr>
+</body>
+</html>

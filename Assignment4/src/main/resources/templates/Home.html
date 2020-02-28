@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+body
+{
+	background-color:grey;
+	color:white;
+}
+h1
+{
+text-align:Center;
+}
+p
+{
+ size:40px;
+}
+a
+{
+color: white;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.image
+{
+ align:left;
+}
+.text
+{
+ align:right;
+ margin-top:15px;
+}
+</style>
+</head>
+<body>
+<h1>Hospital Management System</h1>
+<ul>
+<li><a href="/dummy">Dummy</a></li>
+<li><a href="/Register1">Management</a></li>
+<li><a href="/viewDoctor">Doctor</a></li>
+</ul>
+<table><tr></tr>
+<tr></tr>
+<td class=image>
+<img src="../static/images/one.png"  th:src="@{/images/one.png}" alt="Hospital" height=auto width=auto>
+</td>
+<td class=text>
+<ol type="I">
+<li><h3>Click Dummy to Generate dummy records.</h3></li><br>
+<li><h3>Use Management link for management login.</h3></li><br>
+<li><h3>Use Doctor for Doctor login Page.</h3></li>
+</ol>
+</td>
+</table>
+</body>
+</html>

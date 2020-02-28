@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style >
+body
+{
+margin-top:5%;
+ text-align:center;
+ background-color:grey;
+	color:white;
+}    
+a
+{
+color: white;
+}
+table
+{
+ 
+}
+#customers tr:nth-child(even){background-color:black;}
+#customers tr:hover {background-color: #ddd;}
+</style>
+</head>
+<body>
+<H1>Patient Lst</H1>
+<table align:center>
+<tr>
+<th>Health Card Number</th>
+<th>First Name</th>
+<th>Last Name</th>
+</tr>
+<tr th:each="doc : ${doctor}">
+<td th:text="${doc.pId}"></td>
+<td th:text="${doc.firstName}"></td>
+<td th:text="${doc.lastName}"></td>
+<td><a href="" th:href="@{/select/{pId}(pId=${doc.pId})}">Select</a></td>
+</tr>
+</table>
+<a href="" th:href="@{/logout}">LogOut</a>
+</body>
+</html>
